@@ -29,7 +29,7 @@ const links: ILink[] = [
 
 export const Home = () => {
     return (
-        <div className="text-white  dark:text-[#010138] dark:bg-white">
+        <div className="text-white  dark:text-[#010138]">
             <div id='welcome' className="pt-16 text-center flex flex-col items-center gap-3">
                 <div className='w-1/2'>
                     <img src={profile} alt="" style={{

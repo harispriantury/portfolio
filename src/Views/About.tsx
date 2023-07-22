@@ -4,7 +4,7 @@ import { datas, Idata } from "../data/biodata"
 
 export const About = () => {
     return (
-        <div className="text-white text-center">
+        <div className="text-white text-center dark:text-[#010138]">
             <div id="About Me" className="flex flex-col pt-16 gap-3 font-semibold">
                 <h1 className="text-3xl">About Me</h1>
                 <p>
@@ -29,7 +29,7 @@ export const About = () => {
                         )
                     })
                 }
-                <button className="bg-white text-black px-3 py-2 font-bold rounded-lg">DOWNLOAD CV</button>
+                <button className="bg-white text-[#010138] dark:bg-[#010138] dark:text-white px-3 py-2 font-bold rounded-lg">DOWNLOAD CV</button>
             </div>
             <div id="skills" className="pt-16 flex flex-col gap-3 font-semibold">
                 <h1 className="text-3xl">My Skillset</h1>
@@ -39,7 +39,7 @@ export const About = () => {
                             return (
                                 <div
                                     key={item.name}
-                                    className='border border-white shadow-md shadow-white flex justify-center py-5 text-8xl rounded-md hover:scale-105 duration-500'>
+                                    className='border border-white dark:border-[#010138] shadow-md shadow-white flex justify-center py-5 text-8xl rounded-md hover:scale-105 duration-500'>
                                     <item.icon />
                                 </div>
                             )

@@ -55,14 +55,8 @@ export const Navbar = () => {
 
         if (docs.contains('dark')) {
             docs.remove('dark')
-            console.log(document.getElementsByTagName('body')[0].style.backgroundImage);
-            document.getElementsByTagName('body')[0].style.backgroundImage = 'linear-gradient(to top, rgb(200,200,200, rgb(200,200,200))';
-
         } else {
             docs.add('dark')
-            document.getElementsByTagName('body')[0].style.backgroundImage = 'linear-gradient(to top, rgb(0,0,20, rgb(12,12,92))';
-            console.log(document.getElementsByTagName('body')[0].style.backgroundImage)
-
         }
     }
 
@@ -72,7 +66,7 @@ export const Navbar = () => {
 
     const [navList, setNavList] = useState<boolean>(false);
     return (
-        <nav className=" fixed z-50 top-0 text-white w-full bg-[#010138] dark:text-[#010138] dark:bg-white">
+        <nav className=" fixed z-50 top-0 text-white w-full bg-[#010138] dark:text-white dark:bg-[#0c0c5c]">
             {isLoading && (<LoadingOverlay />)}
             <div className="p-6 flex items-center justify-between">
                 <h1 className="text-2xl">HARIS PRIANTURY</h1>
@@ -95,7 +89,7 @@ export const Navbar = () => {
                     </span>
                 </div>
             </div>
-            <ul className={`absolute w-full flex flex-col items-center py-4 gap-4 bg-[#010138] bg-opacity-50 duration-500 ${navList ? '' : '-translate-y-64'}  dark:text-[#010138] dark:bg-white`}>
+            <ul className={`absolute w-full flex flex-col items-center py-4 gap-4 bg-[#010138] dark:bg-[#010138] dark:text-white dark:bg-opacity-70 bg-opacity-70 duration-500 ${navList ? '' : '-translate-y-64'}  dark:text-[#010138] dark:bg-white`}>
                 {
                     listName.map((item: IListName) => {
                         return (
