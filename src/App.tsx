@@ -9,7 +9,7 @@ import { Footer } from "./components/Footer"
 function App() {
 
   return (
-    <div className="bg-gradient-to-tl from-[#000014] to-[#0c0c5c] dark:bg-gradient-to-tr dark:from-white dark:to-[#d5d5e8]">
+    <div className="bg-gradient-to-tl from-[#000014] to-[#0c0c5c] dark:bg-gradient-to-tr dark:from-white dark:to-[#d5d5e8] relative h-full">
       <Navbar />
       <SnowEffect />
       <div className="mt-20 p-8">

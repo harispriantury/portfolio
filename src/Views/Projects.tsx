@@ -35,20 +35,20 @@ export const Projects = () => {
         window.open(url, '_blank')
     }
     return (
-        <div className="text-white text-center dark:text-[#010138]">
-            <div id="projects" className="flex flex-col items-center font-semibold pt-16 gap-8">
-                <h1 className="text-3xl">My Projects</h1>
+        <div className="text-white text-center dark:text-[#010138] lg:px-32">
+            <div id="projects" className="flex flex-col items-center font-semibold pt-16 gap-8 lg:gap-36 lg:mb-20">
+                <h1 className="text-3xl lg:text-6xl">My Projects</h1>
                 {
                     projects.map((item: IProjects) => {
                         return (
                             <div
                                 key={item.name}
-                                className='flex flex-col gap-3 w-10/12 items-center mb-10 border border-white dark:border-[#010138] p-4 rounded-lg hover:shadow-lg hover:shadow-white hover:scale-105 duration-500'>
+                                className='flex flex-col gap-3 w-10/12 items-center mb-10 border border-white dark:border-[#010138] p-4 rounded-lg hover:shadow-lg hover:shadow-white hover:scale-105 duration-500 lg:p-16'>
                                 <div className='w-10/12'>
                                     <img src={item.image} alt="" />
                                 </div>
-                                <h1 className='text-xl'>{item.name}</h1>
-                                <p>{item.description}</p>
+                                <h1 className='text-xl lg:text-3xl'>{item.name}</h1>
+                                <p className='lg:text-2xl'>{item.description}</p>
                                 <button
                                     onClick={() => handleHref(item.url)}
                                     className='bg-white px-3 py-2 flex justify-center gap-3 text-[#010138] dark:text-white dark:bg-[#010138] rounded-lg items-center'>

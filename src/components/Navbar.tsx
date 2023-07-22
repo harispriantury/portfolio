@@ -68,32 +68,49 @@ export const Navbar = () => {
     return (
         <nav className=" fixed z-50 top-0 text-white w-full bg-[#010138] dark:text-white dark:bg-[#0c0c5c]">
             {isLoading && (<LoadingOverlay />)}
-            <div className="p-6 flex items-center justify-between">
+            <div className="p-6 lg:px-36 flex items-center justify-between">
                 <h1 className="text-2xl">HARIS PRIANTURY</h1>
-                <div className="flex items-center text-2xl gap-3" >
+                <div className="flex items-center text-2xl gap-3 lg:gap-10" >
+                    {/* lg navlist */}
+                    <ul className="flex items-center gap-5 max-lg:hidden cursor-pointer">
+                        {
+                            listName.map((item: IListName) => {
+                                return (
+                                    <a
+                                        className={`hover:opacity-50 cursor-pointer ${location.pathname === item.url && 'font-semibold opacity-70'}`}
+                                        onClick={() => handleClickList(item.url)}
+                                        key={item.name}
+                                    >
+                                        {item.name}
+                                    </a>
+                                )
+                            })
+                        }
+                    </ul>
                     {
                         darkmode ? (
-                            <div className="text-4xl" onClick={handleClickMode}>
+                            <div className="text-4xl cursor-pointer" onClick={handleClickMode}>
                                 <WiDaySunny />
                             </div>
                         ) :
                             (
-                                <div className="mr-2" onClick={handleClickMode}>
+                                <div className="mr-2 cursor-pointer" onClick={handleClickMode}>
                                     <RxMoon />
                                 </div>
                             )
                     }
 
-                    <span className="text-4xl cursor-pointer" onClick={() => setNavList(!navList)} >
+                    <span className="text-4xl cursor-pointer lg:hidden" onClick={() => setNavList(!navList)} >
                         {navList ? <AiFillCloseCircle /> : <IoMdMenu />}
                     </span>
                 </div>
             </div>
-            <ul className={`absolute w-full flex flex-col items-center py-4 gap-4 bg-[#010138] dark:bg-[#010138] dark:text-white dark:bg-opacity-70 bg-opacity-70 duration-500 ${navList ? '' : '-translate-y-64'}  dark:text-[#010138] dark:bg-white`}>
+            <ul className={`absolute w-full flex flex-col items-center py-4 gap-4 bg-[#010138] dark:text- dark:bg-opacity-70 bg-opacity-70 duration-500 ${navList ? '' : '-translate-y-64'}  dark:text-[#010138] dark:bg-white`}>
                 {
                     listName.map((item: IListName) => {
                         return (
                             <a
+                                key={item.name}
                                 className={`flex items-center gap-3 cursor-pointer ${location.pathname === item.url && 'font-semibold'}`}
                                 onClick={() => handleClickList(item.url)}>
                                 <item.icon />
