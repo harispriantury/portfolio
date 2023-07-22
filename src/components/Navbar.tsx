@@ -72,17 +72,20 @@ export const Navbar = () => {
                 <h1 className="text-2xl">HARIS PRIANTURY</h1>
                 <div className="flex items-center text-2xl gap-3 lg:gap-10" >
                     {/* lg navlist */}
-                    <ul className="flex items-center gap-5 max-lg:hidden cursor-pointer">
+                    <ul className="flex items-center gap-10 max-lg:hidden cursor-pointer">
                         {
                             listName.map((item: IListName) => {
                                 return (
-                                    <a
-                                        className={`hover:opacity-50 cursor-pointer ${location.pathname === item.url && 'font-semibold opacity-70'}`}
-                                        onClick={() => handleClickList(item.url)}
-                                        key={item.name}
-                                    >
-                                        {item.name}
-                                    </a>
+                                    <div key={item.name} className={`flex items-center gap-3 hover:opacity-50 cursor-pointer  ${location.pathname === item.url && 'opacity-50'}`}>
+                                        <item.icon />
+                                        <a
+                                            className={``}
+                                            onClick={() => handleClickList(item.url)}
+                                            key={item.name}
+                                        >
+                                            {item.name}
+                                        </a>
+                                    </div>
                                 )
                             })
                         }
