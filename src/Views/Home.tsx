@@ -41,7 +41,7 @@ export const Home = () => {
                     <TypeAnimation
                         sequence={[
                             // Same substring at the start will only be typed once, initially
-                            'Hi, may name is HARIS',
+                            'Hi, my name is HARIS',
                             1000,
                             'Hello , I am a Programmer',
                             1000,
@@ -59,7 +59,7 @@ export const Home = () => {
             <div id='introducing' className='py-20 lg:p-60 text-center flex flex-col items-center gap-3 lg:gap-6 font-semibold lg:text-3xl'>
                 <h1 className='text-3xl font-semibold lg:text-6xl'>LET ME INTRODUCE MYSELF</h1>
                 <p className=''>
-                    I am a junior Frontend Developer with 1 year experience self taught
+                    I am a junior Frontend Developer with 1 year experience self taught.
                 </p>
                 <p>
                     My experience includes developing several web applications using various technologies.
