@@ -1,3 +1,4 @@
+import portfolio0 from '../assets/quran.png'
 import portfolio1 from '../assets/playmemories.png'
 import portfolio2 from '../assets/totallyrecipe.png'
 import portfolio3 from '../assets/portfolio3.png'
@@ -11,6 +12,12 @@ interface IProjects {
 }
 
 const projects: IProjects[] = [
+    {
+        name: 'Quran App',
+        description: `This project was built using the next js framework, and I use the public api to access the surah al quran easily and available many features such as search, interpretation, murotal player, and prayer schedules in the Indonesian region and so on`,
+        url: "https://quran-app-lyart-beta.vercel.app/quran",
+        image: portfolio0
+    },
     {
         name: 'Play Memories',
         description: 'Apart from being a programmer, I also have a photography business, that\'s why I created my own photography website',
