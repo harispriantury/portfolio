@@ -31,9 +31,9 @@ const projects: IProjects[] = [
         image: portfolio2
     },
     {
-        name: 'Basic CRUD',
-        description: 'disini saya membuat aplikasi  backend sederhana menggunakan node js dan database mysql untuk melatih wawasan saya dari sisi backend',
-        url: 'https://github.com/harispriantury/basic-crud',
+        name: 'Blog App CMS',
+        description: 'I have created a simple blog with content management system with supabase / postgresql and next js 13',
+        url: 'https://haris-priantury.vercel.app/',
         image: portfolio3
     }
 ]
