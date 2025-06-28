@@ -1,27 +1,26 @@
-import { Route, Routes } from "react-router-dom"
-import { Navbar } from "./components/Navbar"
-import { Home } from "./Views/Home"
-import { About } from "./Views/About"
-import { Projects } from "./Views/Projects"
-import { SnowEffect } from "./components/SnowEffect"
-import { Footer } from "./components/Footer"
+import { Route, Routes } from "react-router-dom";
+import { Navbar } from "./components/Navbar";
+import { Home } from "./Views/Home";
+import { About } from "./Views/About";
+import { Projects } from "./Views/Projects";
+import { SnowEffect } from "./components/SnowEffect";
+import { Footer } from "./components/Footer";
 
 function App() {
-
   return (
-    <div className="bg-gradient-to-tl from-[#000014] to-[#0c0c5c] dark:bg-gradient-to-tr dark:from-white dark:to-[#d5d5e8] relative h-full">
+    <div className="bg-[#0F0F0F] text-[#F1F1F1] dark:bg-[#F1F1F1] dark:text-[#0F0F0F] relative">
       <Navbar />
       <SnowEffect />
-      <div className="mt-20 p-8">
+      <div className="">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/projects" element={<Projects />} />
         </Routes>
+        <Footer />
       </div>
-      <Footer />
     </div>
-  )
+  );
 }
 
 /* body {
@@ -30,5 +29,4 @@ function App() {
   font-family: "Urbanist", sans-serif;
 } */
 
-
-export default App
+export default App;

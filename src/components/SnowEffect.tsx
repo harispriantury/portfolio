@@ -1,15 +1,15 @@
-import Snowfall from "react-snowfall"
-
+import Snowfall from "react-snowfall";
 
 export const SnowEffect = () => {
   return (
     <Snowfall
-      snowflakeCount={20}
-      speed={[0.1, 0.2]}
+      snowflakeCount={10}
+      speed={[0.1, 0.3]}
+      color="#A9E2C4"
       style={{
-        display: 'block',
-        overflow: 'auto'
+        display: "block",
+        overflow: "auto",
       }}
     />
-  )
-}
+  );
+};

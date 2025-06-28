@@ -1,84 +1,111 @@
-import { FaSquareGithub, FaSquareInstagram } from 'react-icons/fa6'
-import { RxLinkedinLogo } from 'react-icons/rx'
-import profile from '../assets/profile.jpg'
-import { IconType } from 'react-icons'
-import { TypeAnimation } from 'react-type-animation'
+import profile from "../assets/profilev2.png";
+import { TypeAnimation } from "react-type-animation";
+import { links } from "../data/biodata";
+import { motion } from "framer-motion";
 
-interface ILink {
-    name: string
-    icon: IconType
-    url: string
+export interface ILink {
+  name: string;
+  url: string;
+  icon: React.ElementType;
 }
-
-const links: ILink[] = [
-    {
-        name: 'linkedin',
-        icon: RxLinkedinLogo,
-        url: 'https://www.linkedin.com/in/haris-priantury-673951250/'
-    },
-    {
-        name: 'github',
-        icon: FaSquareGithub,
-        url: 'https://github.com/harispriantury'
-    },
-    {
-        name: 'instagram',
-        icon: FaSquareInstagram,
-        url: 'https://www.instagram.com/haris_priantury/'
-    }
-]
 
 export const Home = () => {
-    return (
-        <div className="text-white  dark:text-[#010138] lg:px-36">
-            <div id='welcome' className="pt-16 text-center flex flex-col items-center gap-3 lg:gap-8">
-                <div className='w-1/2 lg:w-1/3'>
-                    <img src={profile} alt="" style={{
-                        borderRadius: '100%'
-                    }} />
-                </div>
-                <div className='text-3xl font-semibold lg:text-6xl'>
-                    <TypeAnimation
-                        sequence={[
-                            // Same substring at the start will only be typed once, initially
-                            'Hi, my name is HARIS',
-                            1000,
-                            'Hello , I am a Programmer',
-                            1000,
-                        ]}
-                        speed={10}
-                        repeat={Infinity}
-                    />
-                </div>
-                <h1 className='lg:text-3xl font-semibold'>
-                    Welcome to my portfolio website !
-                </h1>
-                <p className='font-medium'>
-                </p>
-            </div>
-            <div id='introducing' className='py-20 lg:p-60 text-center flex flex-col items-center gap-3 lg:gap-6 font-semibold lg:text-3xl'>
-                <h1 className='text-3xl font-semibold lg:text-6xl'>LET ME INTRODUCE MYSELF</h1>
-                <p className=''>
-                    I am a junior Frontend Developer with 1 year experience self taught.
-                </p>
-                <p>
-                    My experience includes developing several web applications using various technologies.
-                </p>
-                <p className=''>
-                    For code i use javascript / typescript language.
-                </p>
-
-            </div>
-            <div className='flex flex-col items-center gap-3 lg:pb-40'>
-                <p className='text-base lg:text-3xl'>Feel free to connect with me</p>
-                <div className="flex gap-3 text-4xl lg:text-6xl">
-                    {
-                        links.map((item: ILink) => (
-                            <a key={item.name} onClick={() => window.open(item.url, '_blank')} ><item.icon /></a>
-                        ))
-                    }
-                </div>
-            </div>
+  return (
+    <div className="dark:text-[#0F0F0F] flex justify-around mx-12 max-xl:flex-col max-xl:items-center max-xl:mx-3 max-2xl:flex-col max-2xl:items-center max-2xl:mx-3 min-h-[95vh]">
+      <div
+        id="welcome"
+        className=" pt-36 text-center flex flex-col justify-start items-center gap-3 lg:gap-8 w-3/5 mb-8 max-lg:p-18 max-lg:w-3/4 max-lg:pb-0 max-2xl:p-18 max-2xl:w-1/2 max-2xl:pb-0"
+      >
+        <div className="w-1/2 hover:scale-110 duration-500 cursor-none max-xl:w-3/4">
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 4 }}
+          >
+            <img
+              src={profile}
+              alt=""
+              style={{
+                borderRadius: "100%",
+              }}
+            />
+          </motion.div>
         </div>
-    )
-}
+        <div className="text-3xl font-semibold lg:text-4xl max-xl:text-2xl max-xl:pt-8 max-xl:font-bold">
+          <TypeAnimation
+            sequence={[
+              // Same substring at the start will only be typed once, initially
+              "Hi, I’m Haris Priantury",
+              1000,
+              "A passionate Software Engineer",
+              1000,
+            ]}
+            speed={10}
+            repeat={Infinity}
+          />
+        </div>
+      </div>
+      <div
+        id="introducing"
+        className="w-4/5 p-4 pr-12 text-center gap-2 lg:gap-6 font-semibold flex flex-col items-center justify-start pt-36 max-xl:w-full max-xl:items-center max-xl:py-4 max-xl:p-0 max-xl:mt-0"
+      >
+        <motion.div
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+        >
+          {" "}
+          <h1 className="text-2xl font-semibold lg:text-4xl text-center">
+            Software Engineer |{" "}
+            <span className="text-[#AAEEC4] dark:text-[#32B280] font-bold">
+              Java , Go ,React , Angular and .NET
+            </span>
+          </h1>
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, x: 150 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1 }}
+        >
+          <p className="text-lg pt-3 ">
+            I design and develop full-stack web applications using{" "}
+            <span className="font-bold text-[#AAEEC4] dark:text-[#32B280]">
+              Java , Go ,React , Angular JS and .NET Framework
+            </span>{" "}
+            with a strong focus on performance, maintainability, and clean
+            architecture. My backend systems are powered by{" "}
+            <span className="font-bold text-[#AAEEC4] dark:text-[#32B280]">
+              SQL Server, PostgreSQL, KAFKA
+            </span>{" "}
+            and built to scale.
+          </p>
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 150 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+        >
+          {" "}
+          <div className="flex flex-col items-center gap-3 mt-16">
+            <p className="text-base lg:text-3xl ">
+              Feel free to connect with me
+            </p>
+            <div className="flex gap-3 text-4xl lg:text-6xl text-[#AAEEC4] dark:text-[#32B280]">
+              {links.map((item: ILink) => (
+                <motion.div whileHover={{ scale: 1.1 }}>
+                  <a
+                    className="cursor-pointer"
+                    key={item.name}
+                    onClick={() => window.open(item.url, "_blank")}
+                  >
+                    <item.icon />
+                  </a>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </motion.div>
+      </div>
+    </div>
+  );
+};
