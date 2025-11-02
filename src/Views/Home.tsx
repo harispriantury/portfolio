@@ -75,7 +75,7 @@ export const Home = () => {
             with a strong focus on performance, maintainability, and clean
             architecture. My backend systems are powered by{" "}
             <span className="font-bold text-[#AAEEC4] dark:text-[#32B280]">
-              SQL Server, PostgreSQL, KAFKA
+              SQL Server, PostgreSQL, Redis
             </span>{" "}
             and built to scale.
           </p>

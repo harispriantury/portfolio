@@ -103,13 +103,13 @@ export const educations: IEducate[] = [
     title: "Refactory Software House",
     subtitle:
       "Complete an intensive pairing program, learn and dive into real work in web programming. Work with React TypeScript, Go Lang, and Flutter as a mobile application.",
-    time: "Jan 2023 - Agust 2023",
+    time: "Mar 2023 - Aug 2023",
   },
   {
     title: "Enigma Camp",
     subtitle:
       "Complete the challenge of learning as a full stack web developer by exploring React Js and React native as front end, Java Spring Boot as backend and Basics of Devops",
-    time: "Sep 2023 - Des 2023",
+    time: "Aug 2023 - Des 2023",
   },
 ];
 
